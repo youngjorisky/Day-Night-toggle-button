@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .toggle-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #toggle {
+    display: none;
+  }
+  
+  .toggle-label {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #toggle:checked + .toggle-label {
+    background: #4a4a6a; 
+  }
+  
+.icon {
+    position: absolute;
+    font-size: 20px;
+    transition: all 0.5s ease;
+  }
+  
+  .sun {
+    width: 70px;
+    height: 70px;
+    left: 10px;
+    border: 2px solid gold;
+    border-radius: 50%;
+    background-color: #f7d16f;
+    opacity: 1;
+  }
+  
+  .cloud1, .cloud2 {
+    color: #fff;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  
+  .cloud1 {
+    top: 0px;
+    font-size: 65px;
+    right: 10px;
+  }
+  
+  .cloud2 {
+    bottom: -20px;
+    font-size: 80px;
+    left: 40px;
+  }
+  
+  .moon {
+    font-size: 70px;
+    right: 10px;
+    color: lightblue;
+    opacity: 0;
+  }
+  
+  .stars1, .stars2, .stars3, .stars4 {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    opacity: 0;
+  }
+  
+  .stars1 {
+    left: 50px;
+  }
+  
+  .stars2 {
+    left: 70px;
+    top: 10px;
+  }
+  
+  .stars3 {
+    bottom: 20px;
+    left: 100px;
+  }
+  
+  .stars4 {
+    right: 70px;
+    top: 40px;
+  }
+  
+  #toggle:checked + .toggle-label .sun {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  
+  #toggle:checked + .toggle-label .moon {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  
+  #toggle:checked + .toggle-label .stars1, 
+  #toggle:checked + .toggle-label .stars2, 
+  #toggle:checked + .toggle-label .stars3, 
+  #toggle:checked + .toggle-label .stars4 {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  
+  #toggle:checked + .toggle-label .cloud1, 
+  #toggle:checked + .toggle-label .cloud2 {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  
